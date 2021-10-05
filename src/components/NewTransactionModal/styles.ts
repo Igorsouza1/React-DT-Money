@@ -71,7 +71,7 @@ export const RadioBox = styled.button<RadioBoxProps>`
         border: 1px solid #d7d7d7;
         border-radius: 0.25rem;
 
-        background: ${(props) => props.isActive == true 
+        background: ${(props) => props.isActive === true 
         ? transparentize(0.8, colors[props.activeColor]) 
         : 'transparent'};
 
