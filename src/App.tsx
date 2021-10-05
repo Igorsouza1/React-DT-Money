@@ -5,12 +5,14 @@ import { NewTransactionModal } from "./components/NewTransactionModal";
 
 import Modal from 'react-modal'
 import { useState } from "react";
+import { TransactionProvider } from './TransactionsContext'
 
 
 Modal.setAppElement('#root')
 
 export function App() {
   const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false)
+  
 
   function handleOpenNewTransactionModal(){
       setIsNewTransactionModalOpen(true)
@@ -21,7 +23,7 @@ export function App() {
   }
 
   return (
-    <>
+    <TransactionProvider>
     {/* PASSANDO A FUNÇÃO HANDLE POR PROPRIEDADE PARA O HEADER */}
       <Header onOpenNewTransactionModal={handleOpenNewTransactionModal}/>
       
@@ -31,7 +33,7 @@ export function App() {
       onRequestClose={handleCloseNewTransactionModal}/>
 
       <GlobalStyle />
-    </>
+    </TransactionProvider>
   );
 }
 
