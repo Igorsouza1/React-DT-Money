@@ -4,7 +4,7 @@
 
 
 ## 📋Sobre
-    Projeto de controle de finanças pessoais, podendo cadastrar todas as entradas e 
+Projeto de controle de finanças pessoais, podendo cadastrar todas as entradas e 
 saídas, classificando com nome, valor, saída ou entrada, e a 
 categoria.
 
